@@ -38,17 +38,33 @@ def dado():
 def novo_cadastro():
     dados["nome"] = input("Seu nome: ")
     dados["email"]= input("Seu email: ")
-    dados["idade"]=int(input("Sua idade:"))
-    dados["numero"]=int(input("Seu numero de celular: "))
+    try:
+        dados["idade"]=int(input("Sua idade:"))
+        print("idade salva:", dados["idade"])
+    except ValueError:
+        print("Digite apenas numeros")
+    try:
+        dados["numero"]=int(input("SEu numero de celular: "))
+    except ValueError:
+        print("Digite apenas numeros")
 
 
 tempo()
 print("cadastro iniciado as",hora())
 dados["nome"]=input("Seu nome: ")
 dados["email"]=input("Seu email: ")
-dados["idade"]=int(input("Sua idade:"))
-dados["numero"]=int(input("Seu numero de celular: "))
-print("cadastro salvo")
+try:
+    dados["idade"]=int(input("Sua idade: "))
+    print("Idade salva:", dados["idade"])
+    print("Cadastro salvo")
+except ValueError:
+    print("Erro! Digite apenas numeros")
+    exit()
+try:
+    dados["numero"]=int(input("Seu numero de celular:"))
+except ValueError:
+    print("Erro! Digite apenas numeros")
+    exit()
 
 while True:
     msg = input(">>: ").lower().strip()
