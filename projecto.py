@@ -2,8 +2,7 @@ dados = {
     "nome":"wilson",
     "sobrenome":"Figueiredo",
     "idade":17,
-    "sair":"",
-    "calculadora":""
+    "sair":""
 }
 def calculadora():
     numero1 = int(input("digite o primeiro numero:"))
@@ -33,4 +32,5 @@ while True:
         break
     elif msg == "calculadora":
         calculadora()
-    print("Bot:", resposta)
+    else:
+        print("Bot:", resposta)
