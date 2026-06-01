@@ -9,3 +9,4 @@ for aluno in alunos:
     print("sobrenome", aluno["sobrenome"])
     print("idade", aluno["idade"])
     print("="*10)
+    print("Total de alunos:", len(alunos))
